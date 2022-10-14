@@ -19,7 +19,8 @@ from . import views
 
 urlpatterns = [
     
-    path('crear-personas/<str:nombre>/<str:apellido>/', views.crear_personas),
+    path('index-personas/', views.index_personas),
+    path('crear-personas/<str:nombre>/<str:apellido>/<int:edad>/', views.crear_personas),
     path('ver-personas/', views.ver_personas),
     path('admin/', admin.site.urls),
 ]

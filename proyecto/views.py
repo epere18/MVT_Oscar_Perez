@@ -5,9 +5,16 @@ from django.template import Context, Template, loader
 from AppCoder.models import Familiares
 import random
 
-def crear_personas(request, nombre, apellido):
+def index_personas(request):
 
-    persona = Familiares(nombre=nombre, apellido=apellido, edad=random.randrange(1, 99), fecha_de_nacimiento=datetime.now())
+    template = loader.get_template("index_personas.html")
+    template_renderizado = template.render({})
+    return HttpResponse(template_renderizado)
+
+
+def crear_personas(request, nombre, apellido, edad):
+
+    persona = Familiares(nombre=nombre, apellido=apellido, edad=edad, fecha_de_nacimiento=datetime.now())
     persona.save()
 
     template = loader.get_template("crear_personas.html")
