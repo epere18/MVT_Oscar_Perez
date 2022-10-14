@@ -2,6 +2,8 @@ Buenas tardes; Ayelen
 
 Te comparto mi primer proyecto en MVT donde se cree lo siguiente:
 
+- Despues de repasar las clases y ejecutar los comandos enseñados durante los en vivo te paso el resumen de lo que se realizo.
+
 - Template:
     1 - Crear Personas
     2 - Ver Personas
